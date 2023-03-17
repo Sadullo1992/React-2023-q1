@@ -1,0 +1,18 @@
+.home,
+.about {
+  &__inner {
+    padding: 24px 0;
+    @include breakpoint(767px) {
+      padding-top: 16px;
+    }
+  }
+  &__title {
+    @extend %shopping-title;
+    font-family: $font-family-400;
+    text-align: center;
+    padding-bottom: 24px;
+    @include breakpoint(767px) {
+      padding-bottom: 16px;
+    }
+  }
+}

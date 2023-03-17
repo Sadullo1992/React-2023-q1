@@ -1,0 +1,41 @@
+%shopping-title {
+  font-family: $font-family-700;
+  font-size: 33px;
+  line-height: 44px;
+  @include breakpoint(767px) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+%shopping-section-title {
+  font-family: $font-family-700;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+%shopping-subtitle {
+  font-family: $font-family-700;
+  font-size: 14px;
+  line-height: 22px;
+  @include breakpoint(767px) {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
+%shopping-text {
+  font-family: $font-family-400;
+  font-size: 14px;
+  line-height: 22px;
+  @include breakpoint(767px) {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
+%shopping-label-text {
+  font-family: $font-family-700;
+  font-size: 12px;
+  line-height: 20px;
+}
