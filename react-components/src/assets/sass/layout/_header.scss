@@ -1,0 +1,52 @@
+.header {
+  padding: 16px 0;
+  border-bottom: 1px solid $mercury;
+  @include breakpoint(767px) {
+    padding: 8px 0;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      img {
+        height: 40px;
+        width: 40px;
+      }
+      &__content {
+        padding-top: 5px;
+        h4 {
+          font-family: $font-family-700;
+          font-size: 14px;
+          text-transform: uppercase;
+          color: $shopping-black;
+        }
+        p {
+          @extend %shopping-text;
+          color: $shopping-black;
+          line-height: 1;
+        }
+      }
+    }
+    .nav {
+      display: flex;
+      gap: 24px;
+      &__link {
+        @extend %shopping-subtitle;
+        color: $shopping-black;
+        text-decoration: none;
+        transition: color 0.3s linear;
+        &:hover {
+          color: $shopping-blue;
+        }
+        &--active {
+          color: $shopping-blue;
+          border-bottom: 2px solid $shopping-blue;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.btn {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  outline: 0;
+  cursor: pointer;
+  &--heart {
+    height: 24px;
+    display: block;
+  }
+  &--primary {
+    @extend %shopping-label-text;
+    background-color: $shopping-blue;
+    padding: 10px 32px;
+    height: 40px;
+    width: 100%;
+    min-width: 150px;
+    position: relative;
+    border-radius: 4px;
+    transition: background-color 0.2s linear;
+    @include breakpoint(767px) {
+      width: 100%;
+    }
+    &:hover {
+      background-color: $shopping-darkblue;
+    }
+    .btn__icon {
+      position: absolute;
+      top: 50%;
+      left: 8px;
+      height: 20px;
+      transform: translateY(-50%);
+      @include breakpoint(767px) {
+        left: 12px;
+      }
+    }
+    .btn__text {
+      color: $white;
+      text-transform: uppercase;
+      padding-top: 7px;
+    }
+  }
+}
