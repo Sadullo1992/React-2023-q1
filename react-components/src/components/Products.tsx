@@ -14,9 +14,13 @@ type PropTypes = {
 function Products({ products }: PropTypes) {
   return (
     <div className="cards">
-      {products.map((product: Product, index) => (
-        <ProductItem key={product.id} index={index} product={product} />
-      ))}
+      {products.length === 0 ? (
+        <p className="not-found-element">Sorry, We could not find any products...</p>
+      ) : (
+        products.map((product: Product, index) => (
+          <ProductItem key={product.id} index={index} product={product} />
+        ))
+      )}
     </div>
   );
 }

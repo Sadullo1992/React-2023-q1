@@ -20,7 +20,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
-  ignorePatterns: ['vite.config.ts'],
+  ignorePatterns: ['vite.config.ts', 'coverage/*.js'],
   rules: {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
@@ -28,5 +28,6 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'error',
     'import/no-cycle': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
+    'react/destructuring-assignment': 'off',
   },
 };

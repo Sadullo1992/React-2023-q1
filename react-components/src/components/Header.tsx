@@ -1,6 +1,23 @@
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/images/shop.svg';
 
+type ActiveClassProps = {
+  isActive: boolean;
+  isPending: boolean;
+};
+
+const setActiveClassName = ({ isActive, isPending }: ActiveClassProps): string => {
+  let classname = '';
+  if (isActive) {
+    classname = 'nav__link nav__link--active';
+  } else if (isPending) {
+    classname = 'pending';
+  } else {
+    classname = 'nav__link';
+  }
+  return classname;
+};
+
 function Header() {
   return (
     <header className="header">
@@ -14,16 +31,10 @@ function Header() {
             </div>
           </div>
           <nav className="nav">
-            <NavLink
-              to="/"
-              className={({ isActive, isPending }) => setActiveClassName(isActive, isPending)}
-            >
+            <NavLink to="/" className={setActiveClassName}>
               Home
             </NavLink>
-            <NavLink
-              to="/about"
-              className={({ isActive, isPending }) => setActiveClassName(isActive, isPending)}
-            >
+            <NavLink to="/about" className={setActiveClassName}>
               About
             </NavLink>
           </nav>
@@ -34,15 +45,3 @@ function Header() {
 }
 
 export default Header;
-
-function setActiveClassName(isActive: boolean, isPending: boolean): string {
-  let classname = '';
-  if (isActive) {
-    classname = 'nav__link nav__link--active';
-  } else if (isPending) {
-    classname = 'pending';
-  } else {
-    classname = 'nav__link';
-  }
-  return classname;
-}
