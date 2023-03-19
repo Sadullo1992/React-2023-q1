@@ -3,15 +3,12 @@ import logo from '../assets/images/shop.svg';
 
 type ActiveClassProps = {
   isActive: boolean;
-  isPending: boolean;
 };
 
-const setActiveClassName = ({ isActive, isPending }: ActiveClassProps): string => {
+const setActiveClassName = ({ isActive }: ActiveClassProps): string => {
   let classname = '';
   if (isActive) {
     classname = 'nav__link nav__link--active';
-  } else if (isPending) {
-    classname = 'pending';
   } else {
     classname = 'nav__link';
   }

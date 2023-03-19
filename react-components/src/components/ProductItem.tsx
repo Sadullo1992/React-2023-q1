@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import heartLine from '../assets/icons/heart-3-line.svg';
-import shoppingCart from '../assets/icons/shopping-cart-fill.svg';
 import heartFill from '../assets/icons/heart-3-fill.svg';
+import shoppingCart from '../assets/icons/shopping-cart-fill.svg';
 
 import { Product } from './Products';
 
@@ -36,6 +36,7 @@ class ProductItem extends Component<ProductProps, ProductState> {
             type="button"
             className="btn btn--heart"
             onClick={() => this.setState({ isLiked: !isLiked })}
+            data-testid="heart-btn"
           >
             <img src={isLiked ? heartFill : heartLine} alt="heart" />
           </button>
