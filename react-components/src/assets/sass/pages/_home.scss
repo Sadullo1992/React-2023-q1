@@ -1,5 +1,6 @@
 .home,
-.about {
+.about,
+.orders {
   &__inner {
     padding: 24px 0;
     @include breakpoint(767px) {

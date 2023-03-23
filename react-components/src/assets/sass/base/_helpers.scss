@@ -9,3 +9,40 @@
     padding: 0 16px;
   }
 }
+
+// input
+%input {
+  @extend %shopping-text;
+  height: 40px;
+  padding: 8px 16px;
+  width: 100%;
+  background-color: $white;
+  border: 1px solid $mercury;
+  border-radius: 4px;
+  color: $shopping-black;
+  outline: 0;
+  @include breakpoint(767px) {
+    width: 100%;
+    min-width: auto;
+  }
+  &::placeholder {
+    font-family: $font-family-400;
+    font-size: 14px;
+    line-height: 22px;
+    color: $shopping-black;
+    @include breakpoint(767px) {
+      font-size: 13px;
+      line-height: 18px;
+    }
+  }
+  &:focus {
+    border-color: $silver;
+  }
+}
+
+// Label
+%label {
+  @extend %shopping-label-text;
+  text-transform: uppercase;
+  color: #afafaf;
+}

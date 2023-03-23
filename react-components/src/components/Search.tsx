@@ -37,7 +37,7 @@ class Search extends Component<SearchProps, SearchState> {
     const { searchText } = this.state;
     return (
       <input
-        className="search"
+        className="search input"
         type="text"
         placeholder="Search"
         value={searchText}

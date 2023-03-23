@@ -34,6 +34,9 @@ function Header() {
             <NavLink to="/about" className={setActiveClassName}>
               About
             </NavLink>
+            <NavLink to="/order" className={setActiveClassName}>
+              Orders
+            </NavLink>
           </nav>
         </div>
       </div>
