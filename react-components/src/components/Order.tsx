@@ -1,0 +1,41 @@
+import { IFormData } from './Form';
+
+type OrderProps = {
+  order: IFormData;
+};
+
+function Order({ order }: OrderProps) {
+  const { name, country, date, file, paymentType, agree } = order;
+  return (
+    <article className="card">
+      <img src={file} alt="card" className="card__photo" />
+      <div className="card__body">
+        <p className="card__desc">
+          <strong>Name: </strong>
+          {name}
+        </p>
+        <p className="card__desc">
+          <strong>Country: </strong>
+          {country}
+        </p>
+        <p className="card__desc">
+          <strong>Delivery date: </strong>
+          {date}
+        </p>
+        <p className="card__desc">
+          <strong>Payment type: </strong>
+          {paymentType}
+        </p>
+        <p className="card__desc">
+          <strong>Agreement: </strong>
+          {agree ? 'approved' : 'not approved'}
+        </p>
+        <button type="button" className="btn btn--primary">
+          <span className="btn__text">Completed</span>
+        </button>
+      </div>
+    </article>
+  );
+}
+
+export default Order;

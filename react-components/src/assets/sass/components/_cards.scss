@@ -15,6 +15,18 @@
   @include breakpoint(490px) {
     grid-template-columns: repeat(1, 1fr);
   }
+  &__wrapper {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid $mercury;
+    h2 {
+      font-family: $font-family-400;
+      font-size: 24px;
+    }
+    .cards {
+      padding-top: 24px;
+    }
+  }
 }
 
 .card {

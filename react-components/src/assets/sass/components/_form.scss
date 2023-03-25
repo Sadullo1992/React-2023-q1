@@ -31,4 +31,11 @@
       cursor: pointer;
     }
   }
+  &__error {
+    color: red;
+    text-transform: initial;
+    font-family: $font-family-400;
+    font-size: 12px;
+    line-height: 20px;
+  }
 }
