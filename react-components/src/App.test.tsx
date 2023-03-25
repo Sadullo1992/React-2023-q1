@@ -23,6 +23,15 @@ describe('App', () => {
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('About page');
   });
 
+  it('Renders Orders page', () => {
+    render(
+      <MemoryRouter initialEntries={['/order']}>
+        <App />
+      </MemoryRouter>
+    );
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Place order');
+  });
+
   it('Renders Not found page', () => {
     render(
       <MemoryRouter initialEntries={['/this-route-does-not-exist']}>

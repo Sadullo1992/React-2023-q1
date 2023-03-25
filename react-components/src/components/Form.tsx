@@ -1,6 +1,6 @@
 import { Component, createRef, FormEvent } from 'react';
 import Validation from '../utils/validation';
-import Confirmation from './Comfirmation';
+import Confirmation from './Confirmation';
 
 export interface IFormData {
   name?: string;
@@ -144,7 +144,7 @@ class Form extends Component<FormProps, FormState> {
         </label>
         <label htmlFor="date">
           Delivery date
-          <input type="date" name="date" placeholder="Enter your name" ref={this.dateRef} />
+          <input type="date" name="date" ref={this.dateRef} />
           {!isValidDate && (
             <span className="form__error">
               The delivery date that is invalid, will start from tomorrow

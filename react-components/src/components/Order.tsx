@@ -10,7 +10,7 @@ function Order({ order }: OrderProps) {
     <article className="card">
       <img src={file} alt="card" className="card__photo" />
       <div className="card__body">
-        <p className="card__desc">
+        <p className="card__desc" data-testid="order-name">
           <strong>Name: </strong>
           {name}
         </p>
@@ -26,7 +26,7 @@ function Order({ order }: OrderProps) {
           <strong>Payment type: </strong>
           {paymentType}
         </p>
-        <p className="card__desc">
+        <p className="card__desc" data-testid="order-agree">
           <strong>Agreement: </strong>
           {agree ? 'approved' : 'not approved'}
         </p>
