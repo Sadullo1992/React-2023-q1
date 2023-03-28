@@ -1,0 +1,62 @@
+[
+  {
+    "id": "c2b37985-b99a-4b0c-a8b9-3b1b03d1a2b1",
+    "price": 193,
+    "title": "Runne",
+    "description": "Runnie chair in dark grey with steel legs with black finish"
+  },
+  {
+    "id": "6e7c3138-7a52-4f97-8e21-9ad041b1b418",
+    "price": 1093,
+    "title": "Oaq",
+    "description": "Oaq set of 2 coffee tables in oak wood veneer with natural finish"
+  },
+  {
+    "id": "e11da892-9314-41b4-b93d-b0ec2609863c",
+    "price": 76.5,
+    "title": "Bisbal",
+    "description": "Bisbal ceiling lamp shade with a natural finish, Ø 80 cm"
+  },
+  {
+    "id": "86579f52-7abf-4a67-996c-e377a787d229",
+    "price": 325,
+    "title": "Dumbi",
+    "description": "Dumbi set of 2 pet food and water bowls with support in white and brown Ø 14 cm"
+  },
+  {
+    "id": "79aefa12-ca2d-4e01-b86c-02ba7b31ecf7",
+    "price": 286,
+    "title": "Bowie",
+    "description": "Bowie cover for large bed for pets in beige, 73 x 98 cm"
+  },
+  {
+    "id": "a14c92a5-210c-4782-9b04-1bb95fa21a7b",
+    "price": 962,
+    "title": "Neom",
+    "description": "Neom 2 seater modular sofa with back module in blue, 244 cm"
+  },
+  {
+    "id": "3e3d6775-9d74-498e-a72c-0bc34612dd75",
+    "price": 1968,
+    "title": "Block",
+    "description": "Blok 4 seater sofa with right-hand chaise longue in beige, 330 cm"
+  },
+  {
+    "id": "da6c1f71-b211-4e2d-8636-3b295133bc29",
+    "price": 1262,
+    "title": "Karin",
+    "description": "Karin 3 seater sofa in white with solid beech wood legs, 231 cm"
+  },
+  {
+    "id": "a5fbd621-26d8-44d1-97c0-7a9daefc75b1",
+    "price": 535,
+    "title": "Garbet",
+    "description": "Garbet cement coffee table, Ø 80 cm"
+  },
+  {
+    "id": "6e2d7e94-b35e-4d96-9f54-871dadccaa55",
+    "price": 819,
+    "title": "Licia",
+    "description": "Licia round table made from solid mango wood with natural finish Ø 120 cm"
+  }
+]
