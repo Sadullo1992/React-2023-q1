@@ -105,7 +105,13 @@ class Form extends Component<FormProps, FormState> {
       isValidAgree,
     });
 
-    const isValid = isValidName && isValidCountry && isValidDate && isValidFile && isValidAgree;
+    const isValid =
+      isValidName &&
+      isValidCountry &&
+      isValidDate &&
+      isValidFile &&
+      isValidPaymetType &&
+      isValidAgree;
 
     return isValid;
   }
