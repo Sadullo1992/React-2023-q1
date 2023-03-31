@@ -9,6 +9,7 @@ module.exports = {
     'airbnb/hooks',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
   ],
   overrides: [],
@@ -19,7 +20,7 @@ module.exports = {
     project: './tsconfig.json',
     tsconfigRootDir: __dirname,
   },
-  plugins: ['react', '@typescript-eslint', 'prettier'],
+  plugins: ['react', '@typescript-eslint', 'react-hooks', 'prettier'],
   ignorePatterns: ['vite.config.ts', 'coverage/*.js'],
   rules: {
     'react-hooks/rules-of-hooks': 'error',
