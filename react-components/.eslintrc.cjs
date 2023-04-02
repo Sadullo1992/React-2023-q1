@@ -30,5 +30,6 @@ module.exports = {
     'import/no-cycle': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
     'react/destructuring-assignment': 'off',
+    'react/jsx-props-no-spreading': 'off',
   },
 };

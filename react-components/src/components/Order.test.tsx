@@ -2,7 +2,7 @@ import { describe, it } from 'vitest';
 import { render } from '@testing-library/react';
 
 import Order from './Order';
-import { IFormData } from './Form';
+import { IFormData } from './Form/Form';
 
 const mockOrder: IFormData = {
   name: 'John',

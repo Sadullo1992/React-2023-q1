@@ -1,4 +1,4 @@
-import { IFormData } from './Form';
+import { IFormData } from './Form/Form';
 
 type OrderProps = {
   order: IFormData;
