@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.not-found-element {
+  text-align: center;
+  font-family: $font-family-400;
+  font-size: 18px;
+  color: $silver;
+  position: absolute;
+  top: 24px;
+  width: 100%;
+}
