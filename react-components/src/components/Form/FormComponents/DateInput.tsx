@@ -18,6 +18,7 @@ function DateInput() {
       Delivery date
       <input
         type="date"
+        data-testid="date-input"
         {...register('date', { required: true, validate: (value) => isFutureDate(value) })}
       />
       {errors.date?.type === 'required' && (
