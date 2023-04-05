@@ -16,13 +16,18 @@ function Search({ onSearch }: SearchProps) {
   }, [onSearch, searchText]);
 
   return (
-    <input
-      className="search input"
-      type="text"
-      placeholder="Search"
-      value={searchText}
-      onChange={(e) => setSearchText(e.currentTarget.value)}
-    />
+    <form className="search__form">
+      <input
+        className="search input"
+        type="text"
+        placeholder="Search photos..."
+        value={searchText}
+        onChange={(e) => setSearchText(e.currentTarget.value)}
+      />
+      <button type="submit" className="btn btn--primary">
+        <span className="btn__text">Search</span>
+      </button>
+    </form>
   );
 }
 

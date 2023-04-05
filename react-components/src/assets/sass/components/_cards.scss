@@ -69,6 +69,7 @@
   &__title {
     @extend %shopping-subtitle;
     color: $shopping-black;
+    font-family: $font-family-400;
   }
   &__desc {
     @extend %shopping-text;

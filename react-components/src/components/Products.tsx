@@ -1,3 +1,4 @@
+import { IPhoto } from '../types/photo';
 import ProductItem from './ProductItem';
 
 export interface Product {
@@ -8,7 +9,7 @@ export interface Product {
 }
 
 type PropTypes = {
-  products: Product[];
+  products: IPhoto[];
 };
 
 function Products({ products }: PropTypes) {
@@ -17,9 +18,7 @@ function Products({ products }: PropTypes) {
       {products.length === 0 ? (
         <p className="not-found-element">Sorry, We could not find any products...</p>
       ) : (
-        products.map((product: Product, index) => (
-          <ProductItem key={product.id} index={index} product={product} />
-        ))
+        products.map((product: IPhoto) => <ProductItem key={product.id} product={product} />)
       )}
     </div>
   );

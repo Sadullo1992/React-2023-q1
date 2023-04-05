@@ -40,4 +40,19 @@
       padding-top: 7px;
     }
   }
+  &--close {
+    height: 40px;
+    width: 40px;
+    border: 1px solid $shopping-blue;
+    border-radius: 4px;
+    font-family: $font-family-400;
+    font-size: 18px;
+    color: $shopping-blue;
+    transition: all 0.1s linear;
+    &:hover {
+      border-color: $shopping-darkblue;
+      background-color: $shopping-darkblue;
+      color: $white;
+    }
+  }
 }

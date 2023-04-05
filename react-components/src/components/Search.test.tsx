@@ -7,7 +7,7 @@ describe('Search', () => {
   it('Search input update changes and on searching return the value', () => {
     const onSearch = vitest.fn(() => {});
     const { queryByPlaceholderText } = render(<Search onSearch={onSearch} />);
-    const searchInput = queryByPlaceholderText('Search') as HTMLInputElement;
+    const searchInput = queryByPlaceholderText('Search photos...') as HTMLInputElement;
 
     fireEvent.change(searchInput, { target: { value: 'test' } });
 

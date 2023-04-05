@@ -1,47 +1,54 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import heartLine from '../assets/icons/heart-3-line.svg';
 import heartFill from '../assets/icons/heart-3-fill.svg';
-import shoppingCart from '../assets/icons/shopping-cart-fill.svg';
-
-import { Product } from './Products';
+import dateFormatter from '../utils/dateFormatter';
+import { IPhoto } from '../types/photo';
+import Modal from './Modal';
 
 type ProductProps = {
-  index: number;
-  product: Product;
+  product: IPhoto;
 };
 
-function ProductItem({ index, product }: ProductProps) {
+function ProductItem({ product }: ProductProps) {
   const [isLiked, setIsLiked] = useState<boolean>(false);
+  const [isShowModal, setIsShowModal] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (isShowModal) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => document.body.removeAttribute('style');
+  }, [isShowModal]);
 
   return (
-    <article className="card">
-      <div className="card__header">
-        <span>{product.price}$</span>
-        <button
-          type="button"
-          className="btn btn--heart"
-          onClick={() => setIsLiked(!isLiked)}
-          data-testid="heart-btn"
-        >
-          <img src={isLiked ? heartFill : heartLine} alt="heart" />
-        </button>
-      </div>
-      <img
-        src={`https://source.unsplash.com/random?sig=${index}`}
-        alt="card"
-        className="card__photo"
-      />
-      <div className="card__body">
-        <div>
-          <h3 className="card__title">{product.title}</h3>
-          <p className="card__desc">{product.description}</p>
+    <>
+      <article className="card">
+        <div className="card__header">
+          <span>Likes: {product.likes}</span>
+          <button
+            type="button"
+            className="btn btn--heart"
+            onClick={() => setIsLiked(!isLiked)}
+            data-testid="heart-btn"
+          >
+            <img src={isLiked ? heartFill : heartLine} alt="heart" />
+          </button>
         </div>
-        <button type="button" className="btn btn--primary">
-          <img className="btn__icon" src={shoppingCart} alt="button icon" />
-          <span className="btn__text">Add to cart</span>
-        </button>
-      </div>
-    </article>
+        <img src={product.urls.small} alt="card" className="card__photo" />
+        <div className="card__body">
+          <div>
+            <h3 className="card__title"> Published: {dateFormatter(product.created_at)}</h3>
+            <p className="card__desc">{product.alt_description}</p>
+          </div>
+          <button type="button" className="btn btn--primary" onClick={() => setIsShowModal(true)}>
+            <span className="btn__text">More info about photo</span>
+          </button>
+        </div>
+      </article>
+      {isShowModal && <Modal setIsShowModal={setIsShowModal} product={product} />}
+    </>
   );
 }
 
