@@ -11,7 +11,7 @@ describe('App', () => {
         <App />
       </MemoryRouter>
     );
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Our Galery');
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Our Gallery');
   });
 
   it('Renders About page', () => {

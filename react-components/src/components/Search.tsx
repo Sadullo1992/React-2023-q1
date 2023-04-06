@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 
 type SearchProps = {
   onSearch: (searchText: string) => void;
@@ -11,12 +11,15 @@ function Search({ onSearch }: SearchProps) {
 
   useEffect(() => {
     localStorage.setItem('searchText', searchText);
+  }, [searchText]);
 
+  const handleSearch = (e: FormEvent) => {
+    e.preventDefault();
     onSearch(searchText);
-  }, [onSearch, searchText]);
+  };
 
   return (
-    <form className="search__form">
+    <form className="search__form" onSubmit={handleSearch}>
       <input
         className="search input"
         type="text"

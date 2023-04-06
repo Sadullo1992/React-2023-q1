@@ -24,4 +24,10 @@
     align-items: flex-end;
     gap: 32px;
   }
+  &__inner {
+    position: relative;
+    .not-found-element {
+      top: 200px;
+    }
+  }
 }

@@ -1,5 +1,5 @@
 import { Dispatch, MouseEvent, SetStateAction } from 'react';
-import { IPhoto } from '../types/photo';
+import { IPhoto } from '../types/photo.model';
 import dateFormatter from '../utils/dateFormatter';
 
 type ModalProps = {

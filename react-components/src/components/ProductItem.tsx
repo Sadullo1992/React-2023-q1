@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import heartLine from '../assets/icons/heart-3-line.svg';
 import heartFill from '../assets/icons/heart-3-fill.svg';
 import dateFormatter from '../utils/dateFormatter';
-import { IPhoto } from '../types/photo';
+import { IPhoto } from '../types/photo.model';
 import Modal from './Modal';
 
 type ProductProps = {

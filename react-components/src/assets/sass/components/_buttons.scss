@@ -55,4 +55,24 @@
       color: $white;
     }
   }
+  &--pagination {
+    height: 40px;
+    width: 40px;
+    border: 1px solid $silver;
+    border-radius: 4px;
+    font-family: $font-family-400;
+    font-size: 14px;
+    color: $silver;
+  }
+  &--pagination.center {
+    border: 1px solid $shopping-blue;
+    color: $shopping-blue;
+    cursor: default;
+  }
+  &--pagination.disabled {
+    border: 1px solid $mercury;
+    color: $mercury;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
 }
