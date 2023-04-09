@@ -54,6 +54,7 @@ function Home() {
     } else {
       setIsLoading(false);
       setError(null);
+      setPhotos(null);
     }
   }, [searchText, sortBy, page]);
 
@@ -70,7 +71,7 @@ function Home() {
           {isLoading && <Spinner />}
           {error && <div className="error">Oops: {error}!</div>}
           {!searchText && <p className="not-found-element">Please, Try to search some photos...</p>}
-          {totalPages && <Pagination totalPages={totalPages} setPage={setPage} page={page} />}
+          {!!totalPages && <Pagination totalPages={totalPages} setPage={setPage} page={page} />}
         </div>
       </div>
     </section>

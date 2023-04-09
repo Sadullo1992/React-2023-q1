@@ -51,7 +51,8 @@ function Modal({ setIsShowModal, product }: ModalProps) {
             {product.color}
           </p>
           <p className="modal__content__info">
-            <strong>Description: </strong> <br />a computer generated image of a wave of color
+            <strong>Description: </strong> <br />
+            {product.alt_description}
           </p>
         </div>
       </div>
