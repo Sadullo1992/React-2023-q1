@@ -1,7 +1,7 @@
-import { IFormData } from './Form/Form';
+import { IOrder } from '../types/order.model';
 
 type OrderProps = {
-  order: IFormData;
+  order: IOrder;
 };
 
 function Order({ order }: OrderProps) {

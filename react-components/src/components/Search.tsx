@@ -1,17 +1,22 @@
 import { FormEvent, useEffect, useState } from 'react';
+import { useAppDispatch, useAppSelector } from '../redux/hooks';
+import { selectSearchText, addSearchText } from '../redux/searchSlice';
 
 type SearchProps = {
   onSearch: (searchText: string) => void;
 };
 
 function Search({ onSearch }: SearchProps) {
-  const searchLocalStorageValue = localStorage.getItem('searchText') || '';
+  const searchTextFromStore = useAppSelector(selectSearchText);
+  const dispatch = useAppDispatch();
 
-  const [searchText, setSearchText] = useState(searchLocalStorageValue);
+  const [searchText, setSearchText] = useState(searchTextFromStore);
 
   useEffect(() => {
-    localStorage.setItem('searchText', searchText);
-  }, [searchText]);
+    if (searchTextFromStore !== searchText) {
+      dispatch(addSearchText(searchText));
+    }
+  });
 
   const handleSearch = (e: FormEvent) => {
     e.preventDefault();

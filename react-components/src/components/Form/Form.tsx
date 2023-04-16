@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useForm, SubmitHandler, FormProvider } from 'react-hook-form';
+import { addOrder } from '../../redux/formSlice';
+import { useAppDispatch } from '../../redux/hooks';
+import { IFormData } from '../../types/order.model';
 import Confirmation from '../Confirmation';
 import {
   AgreeCheckbox,
@@ -10,20 +13,8 @@ import {
   PaymentRadio,
 } from './FormComponents';
 
-export interface IFormData {
-  name: string;
-  country: string;
-  date: string;
-  file: string;
-  paymentType: string;
-  agree: boolean;
-}
-
-type FormProps = {
-  setOrders: (order: IFormData) => void;
-};
-
-function Form({ setOrders }: FormProps) {
+function Form() {
+  const dispatch = useAppDispatch();
   const [isConfirm, setIsConfirm] = useState(false);
   const methods = useForm<IFormData>();
 
@@ -42,10 +33,12 @@ function Form({ setOrders }: FormProps) {
   const onSubmit: SubmitHandler<IFormData> = (data) => {
     setIsConfirm(true);
 
-    setOrders({
-      ...data,
-      file: URL.createObjectURL(data.file?.[0] as unknown as Blob),
-    });
+    dispatch(
+      addOrder({
+        ...data,
+        file: URL.createObjectURL(data.file?.[0] as unknown as Blob),
+      })
+    );
 
     reset();
 

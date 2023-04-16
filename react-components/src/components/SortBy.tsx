@@ -1,10 +1,8 @@
-import { Dispatch, SetStateAction } from 'react';
+import { useAppDispatch } from '../redux/hooks';
+import { setSortBy } from '../redux/searchSlice';
 
-type SortByProps = {
-  setSortBy: Dispatch<SetStateAction<string>>;
-};
-
-function SortBy({ setSortBy }: SortByProps) {
+function SortBy() {
+  const dispatch = useAppDispatch();
   return (
     <form className="form form--sort">
       <label htmlFor="country">
@@ -12,7 +10,7 @@ function SortBy({ setSortBy }: SortByProps) {
         <select
           defaultValue="relevant"
           placeholder="select-country"
-          onChange={(e) => setSortBy(e.currentTarget.value)}
+          onChange={(e) => dispatch(setSortBy(e.currentTarget.value))}
         >
           <option value="relevant">Relevant</option>
           <option value="latest">Latest</option>

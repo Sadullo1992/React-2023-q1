@@ -1,19 +1,20 @@
-import { Dispatch, SetStateAction } from 'react';
+import { useAppDispatch, useAppSelector } from '../redux/hooks';
+import { selectPage, goToNextPage, goToPrevPage } from '../redux/searchSlice';
 
 type PaginationProps = {
   totalPages: number;
-  setPage: Dispatch<SetStateAction<number>>;
-  page: number;
 };
 
-function Pagination({ totalPages, setPage, page }: PaginationProps) {
+function Pagination({ totalPages }: PaginationProps) {
+  const page = useAppSelector(selectPage);
+  const dispatch = useAppDispatch();
   return (
     <div className="pagination">
       <div className="pagination__inner">
         <button
           type="button"
           className={page === 1 ? 'btn btn--pagination disabled' : 'btn btn--pagination'}
-          onClick={() => setPage(page - 1)}
+          onClick={() => dispatch(goToPrevPage())}
         >
           Prev
         </button>
@@ -23,7 +24,7 @@ function Pagination({ totalPages, setPage, page }: PaginationProps) {
         <button
           type="button"
           className={page === totalPages ? 'btn btn--pagination disabled' : 'btn btn--pagination'}
-          onClick={() => setPage(page + 1)}
+          onClick={() => dispatch(goToNextPage())}
         >
           Next
         </button>

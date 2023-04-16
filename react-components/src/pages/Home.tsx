@@ -8,8 +8,6 @@ const ACCESS_KEY = 'PSIVIHcV7KeBrf5S34ayiSiPeoKDJ2Cwg6kKDmg2Nyc';
 function Home() {
   const searchLocalStorageValue = localStorage.getItem('searchText') || '';
   const [searchText, setSearchText] = useState(searchLocalStorageValue);
-  const [sortBy, setSortBy] = useState('relevant');
-  const [page, setPage] = useState(1);
   const [photos, setPhotos] = useState(null);
   const [totalPages, setTotalPages] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -17,7 +15,6 @@ function Home() {
 
   const onSearchProduct = useCallback((query: string) => {
     setSearchText(query);
-    setPage(1);
   }, []);
 
   const fetchPhotos = async (query: string, orderBy: string, pageNumber: number) => {
@@ -50,13 +47,13 @@ function Home() {
 
   useEffect(() => {
     if (searchText) {
-      fetchPhotos(searchText, sortBy, page);
+      fetchPhotos(searchText, 'relevant', 1);
     } else {
       setIsLoading(false);
       setError(null);
       setPhotos(null);
     }
-  }, [searchText, sortBy, page]);
+  }, [searchText]);
 
   return (
     <section className="home">
@@ -65,13 +62,13 @@ function Home() {
           <h1 className="home__title">Our Gallery</h1>
           <div className="home__search">
             <Search onSearch={onSearchProduct} />
-            <SortBy setSortBy={setSortBy} />
+            <SortBy />
           </div>
           {photos && <Products products={photos} />}
           {isLoading && <Spinner />}
           {error && <div className="error">Oops: {error}!</div>}
           {!searchText && <p className="not-found-element">Please, Try to search some photos...</p>}
-          {!!totalPages && <Pagination totalPages={totalPages} setPage={setPage} page={page} />}
+          {!!totalPages && <Pagination totalPages={totalPages} />}
         </div>
       </div>
     </section>
