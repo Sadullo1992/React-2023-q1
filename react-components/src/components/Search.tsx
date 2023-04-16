@@ -1,26 +1,34 @@
-import { FormEvent, useEffect, useState } from 'react';
+import { FormEvent, useEffect, useRef, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
-import { selectSearchText, addSearchText } from '../redux/searchSlice';
+import { selectSearchText, addSearchText, resetPage } from '../redux/searchSlice';
 
-type SearchProps = {
-  onSearch: (searchText: string) => void;
-};
-
-function Search({ onSearch }: SearchProps) {
+function Search() {
   const searchTextFromStore = useAppSelector(selectSearchText);
   const dispatch = useAppDispatch();
+
+  const searchValue = useRef<string>('');
 
   const [searchText, setSearchText] = useState(searchTextFromStore);
 
   useEffect(() => {
-    if (searchTextFromStore !== searchText) {
-      dispatch(addSearchText(searchText));
-    }
-  });
+    searchValue.current = searchText;
+  }, [searchText]);
+
+  useEffect(() => {
+    return () => {
+      if (searchTextFromStore !== searchValue.current) {
+        dispatch(addSearchText(searchValue.current));
+      }
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleSearch = (e: FormEvent) => {
     e.preventDefault();
-    onSearch(searchText);
+    if (searchTextFromStore !== searchText) {
+      dispatch(addSearchText(searchText));
+      dispatch(resetPage());
+    }
   };
 
   return (

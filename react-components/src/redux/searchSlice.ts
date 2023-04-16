@@ -3,13 +3,13 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from './store';
 
 interface SearchState {
-  searchText: string;
+  query: string;
   sortBy: string;
   page: number;
 }
 
 const initialState: SearchState = {
-  searchText: '',
+  query: '',
   sortBy: 'relevant',
   page: 1,
 };
@@ -21,7 +21,7 @@ export const searchSlice = createSlice({
     addSearchText: (state, action: PayloadAction<string>) => {
       return {
         ...state,
-        searchText: action.payload,
+        query: action.payload,
       };
     },
     setSortBy: (state, action: PayloadAction<string>) => {
@@ -42,13 +42,21 @@ export const searchSlice = createSlice({
         page: state.page - 1,
       };
     },
+    resetPage: (state) => {
+      return {
+        ...state,
+        page: 1,
+      };
+    },
   },
 });
 
-export const { addSearchText, setSortBy, goToNextPage, goToPrevPage } = searchSlice.actions;
+export const { addSearchText, setSortBy, goToNextPage, goToPrevPage, resetPage } =
+  searchSlice.actions;
 
-export const selectSearchText = (state: RootState) => state.search.searchText;
+export const selectSearchText = (state: RootState) => state.search.query;
 export const selectSortBy = (state: RootState) => state.search.sortBy;
 export const selectPage = (state: RootState) => state.search.page;
+export const selectSearchObj = (state: RootState) => state.search;
 
 export default searchSlice.reducer;
