@@ -1,12 +1,13 @@
-import { describe, it, vitest } from 'vitest';
-import { render, fireEvent } from '@testing-library/react';
+import { describe, it } from 'vitest';
+import { fireEvent } from '@testing-library/react';
+
+import renderWithProviders from '../utils/test-utils';
 
 import Search from './Search';
 
 describe('Search', () => {
   it('Search input update changes and when I press search btn to start searching', () => {
-    const onSearch = vitest.fn(() => {});
-    const { queryByPlaceholderText, getByRole } = render(<Search onSearch={onSearch} />);
+    const { queryByPlaceholderText, getByRole } = renderWithProviders(<Search />);
     const searchInput = queryByPlaceholderText('Search photos...') as HTMLInputElement;
     const searchBtn = getByRole('button', { name: 'Search' });
 
@@ -15,7 +16,5 @@ describe('Search', () => {
 
     expect(searchBtn).toBeInTheDocument();
     fireEvent.click(searchBtn);
-    // to call onSearch function
-    expect(onSearch).toHaveBeenCalledWith('test');
   });
 });
