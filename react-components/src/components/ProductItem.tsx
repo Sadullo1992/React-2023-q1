@@ -47,7 +47,7 @@ function ProductItem({ product }: ProductProps) {
           </button>
         </div>
       </article>
-      {isShowModal && <Modal setIsShowModal={setIsShowModal} product={product} />}
+      {isShowModal && <Modal setIsShowModal={setIsShowModal} id={product.id} />}
     </>
   );
 }

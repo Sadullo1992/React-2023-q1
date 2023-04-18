@@ -1,4 +1,5 @@
 import { BaseQueryFn, createApi, FetchArgs, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { IPhoto } from '../types/photo.model';
 import { SearchResponse } from '../types/search-response.model';
 
 interface IQuery {
@@ -34,7 +35,10 @@ export const apiSlice = createApi({
       },
       extraOptions: undefined,
     }),
+    getPhotoById: builder.query<IPhoto, string>({
+      query: (id) => `/photos/${id}?client_id=${ACCESS_KEY}`,
+    }),
   }),
 });
 
-export const { useGetPhotosMutation } = apiSlice;
+export const { useGetPhotosMutation, useGetPhotoByIdQuery } = apiSlice;

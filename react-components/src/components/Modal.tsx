@@ -1,18 +1,22 @@
 import { Dispatch, MouseEvent, SetStateAction } from 'react';
-import { IPhoto } from '../types/photo.model';
+import { useGetPhotoByIdQuery } from '../redux/apiSlice';
 import dateFormatter from '../utils/dateFormatter';
 
 type ModalProps = {
   setIsShowModal: Dispatch<SetStateAction<boolean>>;
-  product: IPhoto;
+  id: string;
 };
-function Modal({ setIsShowModal, product }: ModalProps) {
+function Modal({ setIsShowModal, id }: ModalProps) {
+  const { data: product } = useGetPhotoByIdQuery(id);
+
   const closeModal = (e: MouseEvent) => {
     e.stopPropagation();
     setIsShowModal(false);
   };
 
   const stopPropagation = (e: MouseEvent) => e.stopPropagation();
+
+  if (!product) return null;
 
   return (
     <div className="modal" onClick={closeModal} aria-hidden="true">
