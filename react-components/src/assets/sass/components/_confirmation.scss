@@ -1,0 +1,35 @@
+.confirmation {
+  position: fixed;
+  top: 100px;
+  right: 20%;
+  z-index: 9;
+  background-color: $white;
+  box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.05);
+  &__inner {
+    padding: 10px 24px;
+    position: relative;
+    p {
+      @extend %shopping-text;
+    }
+  }
+  &__line {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    height: 3px;
+    background-color: $shopping-blue;
+    animation-name: proccess;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes proccess {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
