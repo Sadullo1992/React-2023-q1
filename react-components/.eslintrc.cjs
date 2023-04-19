@@ -21,7 +21,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
   },
   plugins: ['react', '@typescript-eslint', 'react-hooks', 'prettier'],
-  ignorePatterns: ['vite.config.ts', 'coverage/*.js'],
+  ignorePatterns: ['vite.config.ts', 'coverage/*.js', 'server.ts'],
   rules: {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',

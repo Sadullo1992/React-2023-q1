@@ -21,7 +21,7 @@ function Header() {
       <div className="container">
         <div className="header__inner">
           <div className="logo">
-            <img src={logo} alt="logo" />
+            <img height={40} width={40} src={logo} alt="logo" />
             <div className="logo__content">
               <h4>Shopping</h4>
               <p>e-commers</p>
