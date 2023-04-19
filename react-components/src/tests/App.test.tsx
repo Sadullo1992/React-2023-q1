@@ -2,9 +2,9 @@ import { describe, it } from 'vitest';
 import { screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
-import renderWithProviders from './utils/test-utils';
+import renderWithProviders from '../utils/test-utils';
 
-import App from './App';
+import App from '../App';
 
 describe('App', () => {
   it('Renders Home page', () => {

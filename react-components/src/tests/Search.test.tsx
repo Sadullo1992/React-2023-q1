@@ -3,7 +3,7 @@ import { fireEvent } from '@testing-library/react';
 
 import renderWithProviders from '../utils/test-utils';
 
-import Search from './Search';
+import Search from '../components/Search';
 
 describe('Search', () => {
   it('Search input update changes and when I press search btn to start searching', () => {

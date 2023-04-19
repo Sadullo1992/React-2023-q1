@@ -3,7 +3,7 @@ import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 import { fireEvent, waitFor } from '@testing-library/react';
 import mockFullResponse from '../data/fullResponse.json';
-import Home from './Home';
+import Home from '../pages/Home';
 
 import renderWithProviders from '../utils/test-utils';
 

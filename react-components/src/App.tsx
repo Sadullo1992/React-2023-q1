@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import { Home, About, NotFound, Orders } from './pages';
+import { Home, About, NotFound, OrdersPage } from './pages';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/order" element={<Orders />} />
+        <Route path="/order" element={<OrdersPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

@@ -2,7 +2,7 @@ import { describe, it } from 'vitest';
 
 import renderWithProviders from '../utils/test-utils';
 
-import Order from './Order';
+import Order from '../components/Order';
 import { IOrder } from '../types/order.model';
 
 const mockOrder: IOrder = {

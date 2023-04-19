@@ -1,13 +1,14 @@
 import { Dispatch, MouseEvent, SetStateAction } from 'react';
 import { useGetPhotoByIdQuery } from '../redux/apiSlice';
 import dateFormatter from '../utils/dateFormatter';
+import Spinner from './Spinner';
 
 type ModalProps = {
   setIsShowModal: Dispatch<SetStateAction<boolean>>;
   id: string;
 };
 function Modal({ setIsShowModal, id }: ModalProps) {
-  const { data: product } = useGetPhotoByIdQuery(id);
+  const { data: product, isLoading } = useGetPhotoByIdQuery(id);
 
   const closeModal = (e: MouseEvent) => {
     e.stopPropagation();
@@ -16,6 +17,7 @@ function Modal({ setIsShowModal, id }: ModalProps) {
 
   const stopPropagation = (e: MouseEvent) => e.stopPropagation();
 
+  if (isLoading) return <Spinner />;
   if (!product) return null;
 
   return (

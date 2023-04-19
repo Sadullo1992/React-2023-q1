@@ -4,7 +4,7 @@ import { selectOrders } from '../redux/formSlice';
 import { useAppSelector } from '../redux/hooks';
 import { IOrder } from '../types/order.model';
 
-function Orders() {
+function OrdersPage() {
   const orders = useAppSelector(selectOrders);
   return (
     <section className="orders">
@@ -26,4 +26,4 @@ function Orders() {
   );
 }
 
-export default Orders;
+export default OrdersPage;

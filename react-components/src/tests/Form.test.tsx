@@ -1,8 +1,8 @@
 import { describe, it } from 'vitest';
 import { fireEvent, screen, waitFor } from '@testing-library/react';
-import Form from './Form';
+import Form from '../components/Form/Form';
 
-import renderWithProviders from '../../utils/test-utils';
+import renderWithProviders from '../utils/test-utils';
 
 describe('Form', () => {
   it('Form display current form', () => {

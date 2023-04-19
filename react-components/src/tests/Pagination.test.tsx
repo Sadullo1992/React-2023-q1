@@ -2,7 +2,7 @@ import { describe, it } from 'vitest';
 
 import renderWithProviders from '../utils/test-utils';
 
-import Pagination from './Pagination';
+import Pagination from '../components/Pagination';
 
 describe('Pagination', () => {
   it('Products component shows no product content, if empty array recieved from props', () => {

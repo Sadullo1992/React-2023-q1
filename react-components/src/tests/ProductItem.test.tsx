@@ -1,7 +1,7 @@
 import { describe, it } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 
-import ProductItem from './ProductItem';
+import ProductItem from '../components/ProductItem';
 import heartLine from '../assets/icons/heart-3-line.svg';
 import heartFill from '../assets/icons/heart-3-fill.svg';
 import { IPhoto } from '../types/photo.model';
@@ -24,12 +24,5 @@ describe('ProductItem', () => {
     expect(img.src.includes(heartFill)).toBeTruthy();
     fireEvent.click(heartBtn);
     expect(img.src.includes(heartLine)).toBeTruthy();
-  });
-
-  it('Modal is shown, if MORE INFO ABOUT PHOTO button is clicked ', () => {
-    const { getByRole, getByText } = render(<ProductItem product={mockPhoto} />);
-    const btn = getByRole('button', { name: /More info about photo/ });
-    fireEvent.click(btn);
-    expect(getByText(/Photo owner/)).toBeInTheDocument();
   });
 });

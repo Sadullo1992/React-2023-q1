@@ -3,7 +3,7 @@ import { screen } from '@testing-library/react';
 
 import renderWithProviders from '../utils/test-utils';
 
-import Products from './Products';
+import Products from '../components/Products';
 
 describe('Products', () => {
   it('Products component shows no product content, if empty array recieved from props', () => {

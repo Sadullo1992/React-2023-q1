@@ -1,6 +1,6 @@
 import { describe, it } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import Confirmation from './Confirmation';
+import Confirmation from '../components/Confirmation';
 
 describe('Confirmation', () => {
   it('Confirmation display text message', () => {
