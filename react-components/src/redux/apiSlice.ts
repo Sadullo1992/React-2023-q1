@@ -26,7 +26,7 @@ export const apiSlice = createApi({
     CustomError
   >,
   endpoints: (builder) => ({
-    getPhotos: builder.mutation<SearchResponse, IQuery>({
+    getPhotos: builder.query<SearchResponse, IQuery>({
       query: (arg) => {
         return {
           url: '/search/photos',
@@ -41,4 +41,4 @@ export const apiSlice = createApi({
   }),
 });
 
-export const { useGetPhotosMutation, useGetPhotoByIdQuery } = apiSlice;
+export const { useGetPhotosQuery, useGetPhotoByIdQuery } = apiSlice;
