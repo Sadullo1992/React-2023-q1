@@ -10,7 +10,6 @@ import type { AppStore, RootState } from '../redux/store';
 
 import formReducer from '../redux/formSlice';
 import searchReducer from '../redux/searchSlice';
-import photosReducer from '../redux/photosSlice';
 import { apiSlice } from '../redux/apiSlice';
 
 interface ExtendedRenderOptions extends Omit<RenderOptions, 'queries'> {
@@ -26,7 +25,6 @@ export default function renderWithProviders(
       reducer: {
         form: formReducer,
         search: searchReducer,
-        photos: photosReducer,
         [apiSlice.reducerPath]: apiSlice.reducer,
       },
       middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(apiSlice.middleware),

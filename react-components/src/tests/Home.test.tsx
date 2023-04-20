@@ -1,30 +1,39 @@
 import { describe, it } from 'vitest';
-import { rest } from 'msw';
-import { setupServer } from 'msw/node';
 import { fireEvent, waitFor } from '@testing-library/react';
-import mockFullResponse from '../data/fullResponse.json';
 import Home from '../pages/Home';
 
 import renderWithProviders from '../utils/test-utils';
-
-const server = setupServer(
-  rest.get('https://api.unsplash.com/search/photos', (req, res, ctx) => {
-    return res(ctx.json(mockFullResponse));
-  })
-);
-
-beforeAll(() => server.listen());
-afterEach(() => server.resetHandlers());
-afterAll(() => server.close());
+import SEARCH_VALUE from '../utils/contants';
 
 describe('Home page', () => {
-  it('Home search box api calls with error response', async () => {
-    server.use(
-      rest.get('https://api.unsplash.com/search/photos', (req, res, ctx) => {
-        return res(ctx.status(404));
-      })
-    );
+  it('Home search box api calls with succesfull response', async () => {
+    const { getByText, getByRole, queryByPlaceholderText } = renderWithProviders(<Home />);
+    const searchInput = queryByPlaceholderText('Search photos...') as HTMLInputElement;
+    const searchBtn = getByRole('button', { name: 'Search' });
 
+    fireEvent.change(searchInput, { target: { value: SEARCH_VALUE } });
+    expect(searchInput.value).toBe(SEARCH_VALUE);
+
+    expect(searchBtn).toBeInTheDocument();
+    fireEvent.click(searchBtn);
+
+    await waitFor(() => expect(getByText(/Likes: 16/)).toBeInTheDocument());
+  });
+
+  it('Home search box api calls with not find result', async () => {
+    const { getByText, getByRole, queryByPlaceholderText } = renderWithProviders(<Home />);
+    const searchInput = queryByPlaceholderText('Search photos...') as HTMLInputElement;
+    const searchBtn = getByRole('button', { name: 'Search' });
+
+    fireEvent.change(searchInput, { target: { value: 'not-find-result-by-query' } });
+    fireEvent.click(searchBtn);
+
+    await waitFor(() =>
+      expect(getByText(/Sorry, We could not find any photos.../i)).toBeInTheDocument()
+    );
+  });
+
+  it('Home search box api calls with error response', async () => {
     const { getByText, getByRole, queryByPlaceholderText } = renderWithProviders(<Home />);
     const searchInput = queryByPlaceholderText('Search photos...') as HTMLInputElement;
     const searchBtn = getByRole('button', { name: 'Search' });
@@ -35,6 +44,8 @@ describe('Home page', () => {
     expect(searchBtn).toBeInTheDocument();
     fireEvent.click(searchBtn);
 
-    await waitFor(() => expect(getByText(/Oops:/)).toBeInTheDocument());
+    await waitFor(() =>
+      expect(getByText(/Oops: Something went wrong on our end!/)).toBeInTheDocument()
+    );
   });
 });

@@ -1,6 +1,6 @@
+/* eslint-disable no-console */
 import fs from 'node:fs/promises';
 import express from 'express';
-import { ViteDevServer } from 'vite';
 
 // Constants
 const port = process.env.PORT || 5173;
@@ -11,10 +11,8 @@ const app = express();
 
 app.use('/static', express.static('static'));
 
-// Add Vite or respective production middlewares
-let vite: ViteDevServer;
 const { createServer } = await import('vite');
-vite = await createServer({
+const vite = await createServer({
   server: { middlewareMode: true },
   appType: 'custom',
   base,
@@ -25,11 +23,9 @@ app.use('*', async (req, res) => {
   try {
     const url = req.originalUrl;
 
-    let template: string;
-    let entryServer: Record<string, any>;
-    template = await fs.readFile('./index.html', 'utf-8');
+    let template = await fs.readFile('./index.html', 'utf-8');
     template = await vite.transformIndexHtml(url, template);
-    entryServer = await vite.ssrLoadModule('/src/entry-server.tsx');
+    const entryServer = await vite.ssrLoadModule('/src/entry-server.tsx');
 
     // To create store
     const storeModule = await vite.ssrLoadModule('/src/redux/store.ts');
@@ -50,14 +46,15 @@ app.use('*', async (req, res) => {
         res.write(parts[2]);
         res.end();
       },
-      onError(err: unknown) {
+      onError(err: Error) {
         console.error(err);
       },
     });
   } catch (e) {
-    vite?.ssrFixStacktrace(e);
-    console.log(e.stack);
-    res.status(500).end(e.stack);
+    const err = e as Error;
+    vite?.ssrFixStacktrace(err);
+    console.log(err.stack);
+    res.status(500).end(err.stack);
   }
 });
 

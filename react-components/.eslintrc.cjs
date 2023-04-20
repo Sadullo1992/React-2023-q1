@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    'cypress/globals': true,
   },
   extends: [
     'airbnb',
@@ -10,6 +11,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:cypress/recommended',
     'plugin:prettier/recommended',
   ],
   overrides: [],
@@ -17,11 +19,11 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: './tsconfig.json',
+    project: ['./tsconfig.json', './tsconfig.eslint.json'],
     tsconfigRootDir: __dirname,
   },
-  plugins: ['react', '@typescript-eslint', 'react-hooks', 'prettier'],
-  ignorePatterns: ['vite.config.ts', 'coverage/*.js', 'server.ts'],
+  plugins: ['react', '@typescript-eslint', 'react-hooks', 'prettier', 'cypress'],
+  ignorePatterns: ['vite.config.ts', 'coverage/*.js', 'cypress.config.ts'],
   rules: {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
@@ -31,5 +33,12 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': 'off',
     'react/destructuring-assignment': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'cypress/no-assigning-return-values': 'error',
+    'cypress/no-unnecessary-waiting': 'error',
+    'cypress/assertion-before-screenshot': 'warn',
+    'cypress/no-force': 'warn',
+    'cypress/no-async-tests': 'error',
+    'cypress/no-pause': 'error',
+    'import/no-extraneous-dependencies': 'off',
   },
 };
