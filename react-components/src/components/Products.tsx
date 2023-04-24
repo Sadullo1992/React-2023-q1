@@ -33,7 +33,9 @@ function Products() {
       <>
         <div className="cards">
           {products.length === 0 ? (
-            <p className="not-found-element">Sorry, We could not find any photos...</p>
+            <p className="not-found-element" data-cy="not-found-photos">
+              Sorry, We could not find any photos...
+            </p>
           ) : (
             products.map((product: IPhoto) => <ProductItem key={product.id} product={product} />)
           )}

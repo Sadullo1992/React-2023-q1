@@ -39,8 +39,9 @@ function Search() {
         placeholder="Search photos..."
         value={searchText}
         onChange={(e) => setSearchText(e.currentTarget.value)}
+        data-cy="search-box"
       />
-      <button type="submit" className="btn btn--primary">
+      <button type="submit" className="btn btn--primary" data-cy="search-btn">
         <span className="btn__text">Search</span>
       </button>
     </form>

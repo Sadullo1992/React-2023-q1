@@ -22,6 +22,7 @@
   &__search {
     display: flex;
     align-items: flex-end;
+    justify-content: space-between;
     gap: 32px;
   }
   &__inner {

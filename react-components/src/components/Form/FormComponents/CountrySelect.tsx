@@ -13,6 +13,7 @@ function CountrySelect() {
         defaultValue=""
         placeholder="select-country"
         {...register('country', { required: true })}
+        data-cy="country-select"
       >
         <option value="" disabled>
           Select country

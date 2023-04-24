@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1682356509585" clover="3.2.0">
+  <project timestamp="1682356509588" name="All files">
+    <metrics statements="206" coveredstatements="203" conditionals="63" coveredconditionals="54" methods="79" coveredmethods="76" elements="348" coveredelements="333" complexity="0" loc="206" ncloc="206" packages="7" files="36" classes="36"/>
+    <package name="src">
+      <metrics statements="7" coveredstatements="7" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+      <file name="App.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/App.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="1" count="154" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="44" type="stmt"/>
+        <line num="17" count="22" type="stmt"/>
+        <line num="19" count="22" type="stmt"/>
+      </file>
+      <file name="entry-client.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/entry-client.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="11" count="22" type="stmt"/>
+        <line num="13" count="22" type="stmt"/>
+        <line num="15" count="22" type="stmt"/>
+      </file>
+      <file name="entry-server.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/entry-server.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="setupTests.ts" path="C:/SADULLO/RS/React-2023-q1/react-components/src/setupTests.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.components">
+      <metrics statements="96" coveredstatements="94" conditionals="36" coveredconditionals="30" methods="33" coveredmethods="32"/>
+      <file name="Confirmation.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/components/Confirmation.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="154" type="cond" truecount="1" falsecount="0"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="9" count="22" type="stmt"/>
+        <line num="11" count="22" type="stmt"/>
+      </file>
+      <file name="Header.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/components/Header.tsx">
+        <metrics statements="10" coveredstatements="10" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3"/>
+        <line num="1" count="154" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="22" type="stmt"/>
+        <line num="9" count="156" type="stmt"/>
+        <line num="10" count="156" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="48" type="stmt"/>
+        <line num="13" count="108" type="stmt"/>
+        <line num="15" count="156" type="stmt"/>
+        <line num="19" count="44" type="stmt"/>
+        <line num="45" count="22" type="stmt"/>
+        <line num="47" count="22" type="stmt"/>
+      </file>
+      <file name="Modal.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/components/Modal.tsx">
+        <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
+        <line num="10" count="16" type="stmt"/>
+        <line num="11" count="22" type="stmt"/>
+        <line num="13" count="16" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="18" count="16" type="stmt"/>
+        <line num="20" count="16" type="cond" truecount="1" falsecount="0"/>
+        <line num="21" count="8" type="cond" truecount="0" falsecount="1"/>
+        <line num="23" count="8" type="stmt"/>
+        <line num="72" count="22" type="stmt"/>
+        <line num="74" count="22" type="stmt"/>
+      </file>
+      <file name="Order.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/components/Order.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="3" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="1" count="154" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="39" count="22" type="stmt"/>
+        <line num="41" count="22" type="stmt"/>
+      </file>
+      <file name="Pagination.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/components/Pagination.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+        <line num="8" count="36" type="stmt"/>
+        <line num="9" count="36" type="stmt"/>
+        <line num="10" count="36" type="stmt"/>
+        <line num="11" count="36" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="28" count="6" type="stmt"/>
+        <line num="36" count="22" type="stmt"/>
+        <line num="38" count="22" type="stmt"/>
+      </file>
+      <file name="ProductItem.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/components/ProductItem.tsx">
+        <metrics statements="13" coveredstatements="12" conditionals="6" coveredconditionals="5" methods="5" coveredmethods="4"/>
+        <line num="12" count="376" type="stmt"/>
+        <line num="13" count="376" type="stmt"/>
+        <line num="14" count="376" type="stmt"/>
+        <line num="16" count="376" type="stmt"/>
+        <line num="17" count="356" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="20" count="352" type="stmt"/>
+        <line num="22" count="356" type="stmt"/>
+        <line num="25" count="376" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="48" count="4" type="stmt"/>
+        <line num="58" count="22" type="stmt"/>
+        <line num="60" count="22" type="stmt"/>
+      </file>
+      <file name="Products.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/components/Products.tsx">
+        <metrics statements="15" coveredstatements="14" conditionals="14" coveredconditionals="11" methods="3" coveredmethods="3"/>
+        <line num="9" count="116" type="stmt"/>
+        <line num="10" count="116" type="stmt"/>
+        <line num="12" count="116" type="stmt"/>
+        <line num="21" count="116" type="stmt"/>
+        <line num="24" count="116" type="cond" truecount="1" falsecount="0"/>
+        <line num="25" count="32" type="stmt"/>
+        <line num="28" count="116" type="cond" truecount="1" falsecount="1"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="30" count="116" type="cond" truecount="3" falsecount="0"/>
+        <line num="31" count="40" type="stmt"/>
+        <line num="32" count="40" type="stmt"/>
+        <line num="40" count="360" type="stmt"/>
+        <line num="47" count="116" type="stmt"/>
+        <line num="53" count="22" type="stmt"/>
+        <line num="55" count="22" type="stmt"/>
+      </file>
+      <file name="Search.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/components/Search.tsx">
+        <metrics statements="20" coveredstatements="20" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
+        <line num="5" count="308" type="stmt"/>
+        <line num="6" count="308" type="stmt"/>
+        <line num="7" count="308" type="stmt"/>
+        <line num="9" count="308" type="stmt"/>
+        <line num="11" count="308" type="stmt"/>
+        <line num="13" count="308" type="stmt"/>
+        <line num="14" count="166" type="stmt"/>
+        <line num="17" count="308" type="stmt"/>
+        <line num="18" count="36" type="stmt"/>
+        <line num="19" count="20" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="26" count="308" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
+        <line num="28" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="29" count="6" type="stmt"/>
+        <line num="30" count="6" type="stmt"/>
+        <line num="34" count="308" type="stmt"/>
+        <line num="41" count="130" type="stmt"/>
+        <line num="49" count="22" type="stmt"/>
+        <line num="51" count="22" type="stmt"/>
+      </file>
+      <file name="SortBy.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/components/SortBy.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="4" count="36" type="stmt"/>
+        <line num="5" count="36" type="stmt"/>
+        <line num="6" count="36" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="22" count="22" type="stmt"/>
+        <line num="24" count="22" type="stmt"/>
+      </file>
+      <file name="Spinner.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/components/Spinner.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="154" type="cond" truecount="1" falsecount="0"/>
+        <line num="2" count="64" type="stmt"/>
+        <line num="11" count="22" type="stmt"/>
+        <line num="13" count="22" type="stmt"/>
+      </file>
+      <file name="index.ts" path="C:\SADULLO\RS\React-2023-q1\react-components\src\components\index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.components.Form">
+      <metrics statements="17" coveredstatements="16" conditionals="3" coveredconditionals="3" methods="5" coveredmethods="4"/>
+      <file name="Form.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/components/Form/Form.tsx">
+        <metrics statements="17" coveredstatements="16" conditionals="3" coveredconditionals="3" methods="5" coveredmethods="4"/>
+        <line num="16" count="76" type="stmt"/>
+        <line num="17" count="76" type="stmt"/>
+        <line num="18" count="76" type="stmt"/>
+        <line num="19" count="76" type="stmt"/>
+        <line num="25" count="76" type="stmt"/>
+        <line num="27" count="76" type="stmt"/>
+        <line num="28" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="33" count="76" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="45" count="2" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="50" count="76" type="stmt"/>
+        <line num="66" count="22" type="stmt"/>
+        <line num="68" count="22" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Form.FormComponents">
+      <metrics statements="35" coveredstatements="35" conditionals="18" coveredconditionals="17" methods="14" coveredmethods="14"/>
+      <file name="AgreeCheckbox.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/components/Form/FormComponents/AgreeCheckbox.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="3" count="76" type="stmt"/>
+        <line num="7" count="76" type="stmt"/>
+        <line num="9" count="76" type="stmt"/>
+        <line num="16" count="22" type="stmt"/>
+        <line num="18" count="22" type="stmt"/>
+      </file>
+      <file name="CountrySelect.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/components/Form/FormComponents/CountrySelect.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="3" count="76" type="stmt"/>
+        <line num="7" count="76" type="stmt"/>
+        <line num="9" count="76" type="stmt"/>
+        <line num="29" count="22" type="stmt"/>
+        <line num="31" count="22" type="stmt"/>
+      </file>
+      <file name="DateInput.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/components/Form/FormComponents/DateInput.tsx">
+        <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="4"/>
+        <line num="3" count="22" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="10" count="76" type="stmt"/>
+        <line num="14" count="76" type="stmt"/>
+        <line num="16" count="76" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="33" count="22" type="stmt"/>
+        <line num="35" count="22" type="stmt"/>
+      </file>
+      <file name="FileInput.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/components/Form/FormComponents/FileInput.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="3" count="76" type="stmt"/>
+        <line num="7" count="76" type="stmt"/>
+        <line num="9" count="76" type="stmt"/>
+        <line num="21" count="22" type="stmt"/>
+        <line num="23" count="22" type="stmt"/>
+      </file>
+      <file name="NameInput.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/components/Form/FormComponents/NameInput.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <line num="3" count="76" type="stmt"/>
+        <line num="7" count="76" type="stmt"/>
+        <line num="9" count="76" type="stmt"/>
+        <line num="25" count="22" type="stmt"/>
+        <line num="27" count="22" type="stmt"/>
+      </file>
+      <file name="PaymentRadio.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/components/Form/FormComponents/PaymentRadio.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="3" count="76" type="stmt"/>
+        <line num="7" count="76" type="stmt"/>
+        <line num="9" count="76" type="stmt"/>
+        <line num="34" count="22" type="stmt"/>
+        <line num="36" count="22" type="stmt"/>
+      </file>
+      <file name="index.ts" path="C:\SADULLO\RS\React-2023-q1\react-components\src\components\Form\FormComponents\index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.pages">
+      <metrics statements="18" coveredstatements="18" conditionals="3" coveredconditionals="3" methods="7" coveredmethods="7"/>
+      <file name="About.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/pages/About.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="154" type="cond" truecount="1" falsecount="0"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="11" count="22" type="stmt"/>
+        <line num="13" count="22" type="stmt"/>
+      </file>
+      <file name="Home.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/pages/Home.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="1" count="154" type="cond" truecount="1" falsecount="0"/>
+        <line num="4" count="36" type="stmt"/>
+        <line num="18" count="22" type="stmt"/>
+        <line num="20" count="22" type="stmt"/>
+      </file>
+      <file name="NotFound.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/pages/NotFound.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="154" type="cond" truecount="1" falsecount="0"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="10" count="22" type="stmt"/>
+        <line num="12" count="22" type="stmt"/>
+      </file>
+      <file name="OrdersPage.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/pages/OrdersPage.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="22" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="27" count="22" type="stmt"/>
+        <line num="29" count="22" type="stmt"/>
+      </file>
+      <file name="index.ts" path="C:\SADULLO\RS\React-2023-q1\react-components\src\pages\index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.redux">
+      <metrics statements="30" coveredstatements="30" conditionals="0" coveredconditionals="0" methods="17" coveredmethods="16"/>
+      <file name="apiSlice.ts" path="C:\SADULLO\RS\React-2023-q1\react-components\src\redux\apiSlice.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="19" count="22" type="stmt"/>
+        <line num="21" count="22" type="stmt"/>
+        <line num="28" count="22" type="stmt"/>
+        <line num="31" count="14" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="44" count="22" type="stmt"/>
+      </file>
+      <file name="formSlice.ts" path="C:\SADULLO\RS\React-2023-q1\react-components\src\redux\formSlice.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="10" count="22" type="stmt"/>
+        <line num="14" count="22" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="34" count="22" type="stmt"/>
+        <line num="36" count="22" type="stmt"/>
+      </file>
+      <file name="hooks.ts" path="C:\SADULLO\RS\React-2023-q1\react-components\src\redux\hooks.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="5" count="22" type="stmt"/>
+        <line num="6" count="22" type="stmt"/>
+      </file>
+      <file name="searchSlice.ts" path="C:\SADULLO\RS\React-2023-q1\react-components\src\redux\searchSlice.ts">
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="8"/>
+        <line num="11" count="22" type="stmt"/>
+        <line num="17" count="22" type="stmt"/>
+        <line num="22" count="8" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="34" count="6" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="46" count="6" type="stmt"/>
+        <line num="55" count="22" type="stmt"/>
+        <line num="57" count="150" type="stmt"/>
+        <line num="58" count="22" type="stmt"/>
+        <line num="59" count="72" type="stmt"/>
+        <line num="60" count="220" type="stmt"/>
+      </file>
+      <file name="store.ts" path="C:\SADULLO\RS\React-2023-q1\react-components\src\redux\store.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="6" count="22" type="stmt"/>
+        <line num="11" count="22" type="stmt"/>
+        <line num="12" count="22" type="stmt"/>
+        <line num="15" count="22" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.utils">
+      <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="contants.ts" path="C:/SADULLO/RS/React-2023-q1/react-components/src/utils/contants.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="dateFormatter.ts" path="C:\SADULLO\RS\React-2023-q1\react-components\src\utils\dateFormatter.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="22" type="stmt"/>
+        <line num="2" count="384" type="cond" truecount="0" falsecount="2"/>
+        <line num="3" count="384" type="stmt"/>
+      </file>
+      <file name="test-utils.tsx" path="C:/SADULLO/RS/React-2023-q1/react-components/src/utils/test-utils.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+  </project>
+</coverage>

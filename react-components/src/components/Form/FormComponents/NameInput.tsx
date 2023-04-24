@@ -13,6 +13,7 @@ function NameInput() {
         type="text"
         placeholder="Enter your name"
         {...register('name', { required: true, pattern: /^[A-Z].*$/, minLength: 3 })}
+        data-cy="name-input"
       />
       {errors.name?.type === 'required' && <span className="form__error">Name is required!</span>}
       {errors.name?.type === 'pattern' && (

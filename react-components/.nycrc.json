@@ -1,0 +1,15 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+  "check-coverage": true,
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": [
+    "cypress/**/*.*",
+    "**/*.d.ts",
+    "**/*.cy.tsx",
+    "**/*.cy.ts",
+    "src/tests/",
+    "src/types/"
+  ],
+  "report-dir": "./e2e-coverage"
+}

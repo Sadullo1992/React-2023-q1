@@ -56,7 +56,7 @@ function Form() {
         <FileInput />
         <PaymentRadio />
         <AgreeCheckbox />
-        <button type="submit" className="btn btn--primary">
+        <button type="submit" className="btn btn--primary" data-cy="submit-btn">
           <span className="btn__text">Submit</span>
         </button>
         {isConfirm && <Confirmation />}

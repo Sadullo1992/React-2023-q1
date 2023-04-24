@@ -30,7 +30,7 @@ function Order({ order }: OrderProps) {
           <strong>Agreement: </strong>
           {agree ? 'approved' : 'not approved'}
         </p>
-        <button type="button" className="btn btn--primary">
+        <button type="button" className="btn btn--primary" data-cy="completed-btn">
           <span className="btn__text">Completed</span>
         </button>
       </div>

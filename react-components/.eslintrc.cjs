@@ -23,7 +23,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
   },
   plugins: ['react', '@typescript-eslint', 'react-hooks', 'prettier', 'cypress'],
-  ignorePatterns: ['vite.config.ts', 'coverage/*.js', 'cypress.config.ts'],
+  ignorePatterns: ['vite.config.ts', 'coverage/*.js', 'cypress.config.ts', 'e2e-coverage'],
   rules: {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',

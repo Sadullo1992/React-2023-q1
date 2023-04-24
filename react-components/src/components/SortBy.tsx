@@ -11,6 +11,7 @@ function SortBy() {
           defaultValue="relevant"
           placeholder="select-country"
           onChange={(e) => dispatch(setSortBy(e.currentTarget.value))}
+          data-cy="sort-select"
         >
           <option value="relevant">Relevant</option>
           <option value="latest">Latest</option>

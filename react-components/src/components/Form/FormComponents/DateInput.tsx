@@ -20,6 +20,7 @@ function DateInput() {
         type="date"
         data-testid="date-input"
         {...register('date', { required: true, validate: (value) => isFutureDate(value) })}
+        data-cy="date-input"
       />
       {errors.date?.type === 'required' && (
         <span className="form__error">The delivery date is required!</span>

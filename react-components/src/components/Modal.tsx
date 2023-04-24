@@ -21,9 +21,14 @@ function Modal({ setIsShowModal, id }: ModalProps) {
   if (!product) return null;
 
   return (
-    <div className="modal" onClick={closeModal} aria-hidden="true">
-      <div className="modal__inner" onClick={stopPropagation} aria-hidden="true">
-        <button type="button" className="btn btn--close" onClick={closeModal}>
+    <div className="modal" onClick={closeModal} aria-hidden="true" data-cy="modal">
+      <div
+        className="modal__inner"
+        onClick={stopPropagation}
+        aria-hidden="true"
+        data-cy="modal-inner"
+      >
+        <button type="button" className="btn btn--close" onClick={closeModal} data-cy="close-btn">
           X
         </button>
         <img src={product.urls.small} alt="modal-img" className="modal__photo" />

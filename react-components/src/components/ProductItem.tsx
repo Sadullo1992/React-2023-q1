@@ -42,7 +42,12 @@ function ProductItem({ product }: ProductProps) {
             <h3 className="card__title"> Published: {dateFormatter(product.created_at)}</h3>
             <p className="card__desc">{product.alt_description}</p>
           </div>
-          <button type="button" className="btn btn--primary" onClick={() => setIsShowModal(true)}>
+          <button
+            type="button"
+            className="btn btn--primary"
+            onClick={() => setIsShowModal(true)}
+            data-cy="more-btn"
+          >
             <span className="btn__text">More info about photo</span>
           </button>
         </div>

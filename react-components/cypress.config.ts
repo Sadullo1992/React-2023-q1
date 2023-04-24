@@ -1,9 +1,18 @@
 import { defineConfig } from 'cypress';
+import cypressCodeCoverage from '@cypress/code-coverage/task';
 
 export default defineConfig({
-  e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
+  env: {
+    codeCoverage: {
+      exclude: 'cypress/**/*.*',
     },
+  },
+  e2e: {
+    baseUrl: 'http://localhost:5173',
+    setupNodeEvents(on, config) {
+      cypressCodeCoverage(on, config);
+      return config;
+    },
+    video: false,
   },
 });

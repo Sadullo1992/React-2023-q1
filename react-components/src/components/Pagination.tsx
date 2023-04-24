@@ -15,16 +15,18 @@ function Pagination({ totalPages }: PaginationProps) {
           type="button"
           className={page === 1 ? 'btn btn--pagination disabled' : 'btn btn--pagination'}
           onClick={() => dispatch(goToPrevPage())}
+          data-cy="pagination-btn"
         >
           Prev
         </button>
-        <button type="button" className="btn btn--pagination center">
+        <button type="button" className="btn btn--pagination center" data-cy="pagination-btn">
           {page}
         </button>
         <button
           type="button"
           className={page === totalPages ? 'btn btn--pagination disabled' : 'btn btn--pagination'}
           onClick={() => dispatch(goToNextPage())}
+          data-cy="pagination-btn"
         >
           Next
         </button>
